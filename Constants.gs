@@ -304,6 +304,7 @@ id: String,
   user: String
 */
 
+
 function testLog(){
 
     var LOGDATA = {
@@ -361,7 +362,7 @@ function getStatus(){
 }
 
 function setStatusinDB(attr){
-attr = 'On';
+ 
   Logger.log(attr);
   if(attr=='Off'){
     var data={
