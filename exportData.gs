@@ -139,7 +139,7 @@ for(var j=0;j<tabs.length;j++){
       for(var i=0;i<data.length;i++){
        if(!data[i].recipe){continue;}
       data[i].boxname?data[i].boxname.name||(data[i].boxname={name:"",sku:""}):data[i].boxname={name:"",sku:""},data[i].packagingType?data[i].packagingType.name||(data[i].packagingType={name:"",sku:""}):data[i].packagingType={name:"",sku:""};
-      values.push([data[i].ProductionCompleted,formatDateDisplay(data[i].orderdate),data[i].batch,data[i].numLabelsBottles,data[i].numLabelsTubes,data[i].expDate,data[i].orderID,data[i].productcode,data[i].productdescription,data[i].priority,data[i].customer,data[i].brand,data[i].recipe.name,
+      values.push([data[i].ProductionCompleted,formatDateDisplay(data[i].orderdate),data[i].batch,data[i].numLabelsBottles,data[i].numLabelsTubes,formatDateDisplay(data[i].expDate),data[i].orderID,data[i].productcode,data[i].productdescription,data[i].priority,data[i].customer,data[i].brand,data[i].recipe.name,
       data[i].flavour.name,data[i].bottles,data[i].btype,data[i].lid,data[i].packagingType.name,data[i].botlabel,data[i].boxname.name,formatDateDisplay2(data[i].starttime),formatDateDisplay2(data[i].CompletionDate),data[i].ProductionCompleted,data[i].Location]);
 
    }
