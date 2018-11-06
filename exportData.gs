@@ -96,7 +96,7 @@ for(var j=0;j<tabs.length;j++){
             priorities.push(mixARR[k].priority);
             }      
       values.push([data[i].Completed,priorities.join(),data[i].prodDate,batches.join(),data[i].MIXNAME,data[i].RECIPE,data[i].FLAVOUR,orderDates.join(),
-      data[i].QTYTOTAL,data[i].VGval,data[i].AGval,data[i].PGval,data[i].Nico,data[i].Nicosalts,data[i].CBDvalue,data[i].MCTval,data[i].flavvalue,data[i].Notes,data[i].Location,formatDateDisplay2(data[i].starttime),data[i].CompletionDate,data[i].vgSupplier,data[i].pgSupplier,data[i].nicSupplier,data[i].flavSupplier]);
+      data[i].QTYTOTAL,data[i].VGval,data[i].AGval,data[i].PGval,data[i].Nico,data[i].Nicosalts,data[i].CBDvalue,data[i].MCTval,data[i].flavvalue,data[i].Notes,data[i].Location,formatDateDisplay2(data[i].starttime),formatDateDisplay2(data[i].CompletionDate),data[i].vgSupplier,data[i].pgSupplier,data[i].nicSupplier,data[i].flavSupplier]);
       }
       }
       var sheet=file.insertSheet('Mixing Team');
@@ -199,8 +199,8 @@ for(var j=0;j<tabs.length;j++){
        data[i].SHIPPINGCODE = data[i].SHIPPINGCODE ? data[i].SHIPPINGCODE : '';
        data[i].boxname?data[i].boxname.name||(data[i].boxname={name:"",sku:""}):data[i].boxname={name:"",sku:""},data[i].packagingType?data[i].packagingType.name||(data[i].packagingType={name:"",sku:""}):data[i].packagingType={name:"",sku:""};
       values.push([formatDateDisplay(data[i].orderdate),data[i].batch,data[i].orderID,data[i].productcode,data[i].productdescription,data[i].priority,data[i].customer,data[i].brand,data[i].recipe.name,data[i].PRINTCODE,data[i].flavour.name,data[i].bottles,
-      data[i].btype,data[i].lid,data[i].packagingType.name,data[i].final_status,data[i].shipping_status ,data[i].SHIPPINGCODE,data[i].dateshipped,data[i].trackingNo,
-      data[i].datedelivered,data[i].shippinglocation]);
+      data[i].btype,data[i].lid,data[i].packagingType.name,data[i].final_status,data[i].shipping_status ,data[i].SHIPPINGCODE,formatDateDisplay(data[i].dateshipped),data[i].trackingNo,
+      formatDateDisplay(data[i].datedelivered),data[i].shippinglocation]);
       }
       var sheet=file.insertSheet('Shipping');
       sheet.getRange(1, 1, values.length, values[0].length).setValues(values);
