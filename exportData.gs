@@ -1108,7 +1108,7 @@ function createCompletedExport(H,name){
   if(H <= 15){
     range = [1,15];
   }else{
-    range = [15,21];
+    range = [15,19];
   }
   
   var d2=new Date().getTime()-(range[1]*60*60*1000);
